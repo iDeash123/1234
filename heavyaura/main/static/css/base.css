@@ -263,19 +263,25 @@ h5 {
 }
 
 .llist {
-    margin-left: -80px;
+    margin-left: 0px;
 }
 
 .sidebar ul li {
     font-size: 20px;
-    width: 165px;
+    width: 170px;
     height: 35px;
     margin-bottom: 5px;
+    height: auto;
 }
 
 .sidebar ul li a {
-    margin-left: 15px;
-    width: 165px;
+    display: inline-block;
+    width: 180px;
+    height: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: normal;
 }
 .sidebar ul {
     margin-top: 20px;
@@ -284,5 +290,5 @@ h5 {
 .selected {
     border: 1px solid #000;
     border-radius: 5px;
-    background-image: url(../img/categories-gtn.png);
+    /* background-image: url(../img/categories-gtn.png); */
 }
