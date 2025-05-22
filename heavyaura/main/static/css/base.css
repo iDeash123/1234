@@ -237,7 +237,7 @@ h5 {
 }
 
 .main {
-    margin-left: 150px;
+    margin-left: 100px;
 }
 
 .main-title {
@@ -260,6 +260,7 @@ h5 {
 
 .sidebar {
     margin-top: 70px;
+    margin-left: 15px;
 }
 
 .llist {
@@ -290,5 +291,19 @@ h5 {
 .selected {
     border: 1px solid #000;
     border-radius: 5px;
-    /* background-image: url(../img/categories-gtn.png); */
+    background-image: url(../img/categories-gtn.png);
+}
+
+.pagination {
+    display: flex;
+    position: static;
+    bottom: 0%;
+    left: 46%;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.disabled {
+    opacity: 0.2;
 }
