@@ -21,7 +21,7 @@
                         <div class="cart-card-q">
                             <p>Quantity: {{ item.quantity }}</p>
                         </div>
-                        <form action="{% url "cart:remove" product.id %}" method="post">
+                        <form action="{% url "cart:cart_remove" product.id %}" class="qform" method="post">
                             <input type="submit" value="Remove" class="remove-btn">
                             {% csrf_token %}
                         </form>
