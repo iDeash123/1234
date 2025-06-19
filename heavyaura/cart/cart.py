@@ -56,4 +56,4 @@ class Cart:
         total = sum(((Decimal(item['price']) - Decimal(item['price']) \
             * Decimal(item['product'].discount / 100))) * item['quantity']
                 for item in self.cart.values())
-        return format (total, '2f')
+        return format (round(total, 2))
