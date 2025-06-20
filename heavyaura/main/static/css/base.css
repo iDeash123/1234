@@ -327,6 +327,9 @@ h5 {
 
 .cart {
     flex-direction: column;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 150px;
 }
 
 .cart-title {
@@ -338,7 +341,9 @@ h5 {
     max-height: 52vh;
     max-width: 600px;
     overflow-y: auto;
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 /* .cart-cardsrem {
