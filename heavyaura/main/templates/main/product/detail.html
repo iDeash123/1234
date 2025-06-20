@@ -16,13 +16,22 @@
             <h2>{{ product.name }}</h2>
             <h3>Category: {{ product.category }}</h3>
             <p>Description: {{ product.description|linebreaks }}</p>
+            <p>Release Date:
+                <span class="release-date">
+                    {% if product.release_date %}
+                        {{ product.release_date|date:"F d, Y" }}
+                    {% else %}
+                        None
+                    {% endif %}
+                </span>
+            </p>
             {% if product.discount %}
                 <div class="cart-discount d-flex gap-2">
-                    <p class="line">₴ {{ product.price }}</p>
-                    <p>₴ {{ product.sell_price }}</p>
+                    <p class="line">$ {{ product.price }}</p>
+                    <p>$ {{ product.sell_price }}</p>
                  </div>
             {% else %}
-                <p class="price">₴ {{ product.price }}</p>
+                <p class="price">$ {{ product.price }}</p>
             {% endif %}
             <form action="{% url "cart:cart_add" product.id %}" class="qform" method="post">
                 {{ cart_product_form }}
