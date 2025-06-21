@@ -112,6 +112,7 @@ h5 {
     max-width: 185px;
     mask-type: 20px;
     min-height: 70px;
+    text-align: center;
 }
 
 .card-img {
@@ -215,6 +216,22 @@ h5 {
     display: inline-block; /* щоб margin-left працював правильно */
 }
 
+.stock-value {
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.stock-green {
+    background-color: #e9f5e9;
+    color: #28a745; /* Green for stock > 1 */
+}
+
+.stock-red {
+    background-color: #f8d7da;
+    color: #dc3545; /* Red for stock <= 1 */
+}
 
 .cart-discount {
     margin-top: -10px;
@@ -329,6 +346,25 @@ h5 {
     gap: 12px;
     justify-content: center;
     margin-top: 50px;
+}
+
+.pagination a, .pagination span {
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover, .pagination span:hover {
+    background-color: #d0d0d0;
+}
+
+.pagination .active {
+    background-color: #007bff;
+    color: white;
 }
 
 .disabled {
@@ -466,10 +502,9 @@ h5 {
     height: 50px;
     border: 1px solid #00000034;
     border-radius: 5px;
-    margin: 0;
-    transition: all 0.5s ease;
     background-color: #fff;
     margin-top: 25px;
+    transition: all 0.5s ease;
 }
 
 .add-to-cart-btn:hover {

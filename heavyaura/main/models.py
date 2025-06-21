@@ -44,6 +44,7 @@ class Product(models.Model):
                                    decimal_places=2,
                                    default=0.00)
     release_date = models.DateField(null=True, blank=True)
+    stock = models.PositiveIntegerField(default=0)
     
     
     

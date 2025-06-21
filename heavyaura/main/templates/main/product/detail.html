@@ -25,6 +25,11 @@
                     {% endif %}
                 </span>
             </p>
+            <p>Stock Available: 
+                <span class="stock-value {% if product.stock > 1 %}stock-green{% else %}stock-red{% endif %}">
+                    {{ product.stock }}
+                </span>
+            </p>
             {% if product.discount %}
                 <div class="cart-discount d-flex gap-2">
                     <p class="line">$ {{ product.price }}</p>

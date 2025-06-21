@@ -30,12 +30,14 @@
                             <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/noimage.jpg' %}{% endif %}" class="card-img" alt="">
                             <h5 class="title-card">{{ product.name }}</h5>
                             {% if product.discount %}
-                                <div class="cart-discount d-flex gap-2">
-                                    <p class="line">$ {{ product.price }}</p>
-                                    <p>$ {{ product.sell_price }}</p>
+                                <div class="cart-discount">
+                                    <span class="line">$ {{ product.price }}</span>
+                                    <span class="price">$ {{ product.sell_price }}</span>
                                 </div>
                             {% else %}
-                                <p class="price">$ {{ product.price }}</p>
+                                <div class="cart-discount">
+                                    <span class="price">$ {{ product.price }}</span>
+                                </div>
                             {% endif %}
                         </a>
                     </div>
