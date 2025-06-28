@@ -1,2 +1,7 @@
 venv/
 .env
+
+.pylintrc
+__pycache__/
+
+db.sqlite3

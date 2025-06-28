@@ -31,7 +31,7 @@
                             {% if product.discount %}
                                 <div class="cart-discount d-flex gap-2">
                                     <p class="line">$ {{ product.price }}</p>
-                                    <p>$ {{ product.sell_price }}</p>
+                                    <p class="price">$ {{ product.sell_price }}</p> <!-- Добавлен класс .price -->
                                 </div>
                             {% else %}
                                 <p class="price mt-3">$ {{ product.price }}</p>
